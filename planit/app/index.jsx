@@ -1,15 +1,21 @@
-import { Text, View } from "react-native";
+import { useEffect } from "react";
+import { router } from "expo-router";
+import Onboarding1 from "./onboarding1";
+  
 
-import { SafeAreaView } from "react-native-safe-area-context";
+   const Index = ()=>{
+       
+   useEffect(()=>{
 
-export default function Index() {
-  return (
+    setTimeout(()=>{
 
-    <SafeAreaView style={{flex:1, paddingHorizontal:"10%"}}>
-    <View>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+        // router.push('/sign-up')
 
-    </SafeAreaView>
-  );
-}
+    }, 3000)
+   }, [])
+
+    return <Onboarding1/>
+   }
+
+
+   export default Index;
